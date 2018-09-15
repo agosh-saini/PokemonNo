@@ -1,15 +1,18 @@
-<head>
+<link rel="stylesheet" href="bootstrap.css">
+<link rel="stylesheet" href="style.css">
 <link href='https://fonts.googleapis.com/css?family=Press Start 2P' rel='stylesheet'>
-</head>
 
+<div class= "head">
+<head>
 <body>
-
+<div class = "title">
   <p id="CurrentValue" class = "font"> Placeholder</p>
-
-
-
+</div>
 <body>
-<button onclick="GetOwnedTokens()">Get TOkens</button>
+</head>
+</div>
+
+<button class= "gettkns" onclick="GetOwnedTokens()">Get Tokens</button>
 <br> <br>
 <input type="text" placeholder="Address"id="ToAddress">
 
@@ -333,7 +336,7 @@
   var signer;
 
   var OwnedTokens = [];
-   
+
   var privateKey = '0x487B9BCB08140EA82EC240751212F28FC9B379BF2EDC354EBF1D4B2A89534831';
   var wallet = new ethers.Wallet(privateKey, provider);
   var contract = new ethers.Contract(contractaddress, abi, wallet);
@@ -356,7 +359,7 @@
             console.log("Owner Tokens", OwnedTokens);
         })
       }, 100, OwnerOfPromise);
-      
+
   };
  });
 }
