@@ -1,15 +1,43 @@
-.gettkns {
-  background: #000000;
-  color: #FFFFFF;
-}
-
 .title{
   text-align: center;
   padding-top: 30px;
   padding-bottom: 20px;
   color: #d8d8d4;
+  font-family: 'Poppins', sans-serif;
+  font-size: 200%;
 }
 
 .head{
   background: rgba(0,0,0,0.5);
+}
+
+.gettkns {
+  -webkit-transition: all 0.4s ease 0s;
+  transition: all 0.4s ease 0s;
+  background: rgba(0,0,0,0.5);
+  color: #FFFFFF;
+  border: none;
+  text-align: center;
+  cursor: pointer;
+}
+
+.mid{
+  padding-top: 25px;
+  text-align: center;
+}
+
+.container{
+  margin-top: 20px;
+  width: 25%;
+  background: rgba(0, 0, 0, 0.1);
+  padding-bottom: 10px;
+}
+
+.carousel{
+  text-align: center;
+}
+
+.app{
+  padding-top: 100px;
+  align-items: center;
 }
