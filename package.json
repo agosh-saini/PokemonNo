@@ -1,0 +1,24 @@
+{
+  "name": "hackathon",
+  "version": "1.0.0",
+  "description": "\"# PokemonNo\"",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/agosh-saini/PokemonNo.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/agosh-saini/PokemonNo/issues"
+  },
+  "homepage": "https://github.com/agosh-saini/PokemonNo#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "ethers": "^3.0.27",
+    "express": "^4.16.3"
+  }
+}
