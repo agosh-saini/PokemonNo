@@ -314,7 +314,7 @@ var wallet = new ethers.Wallet(privateKey, provider);
  var contract = new ethers.Contract(contractaddress, abi, wallet);
 
  function mintToken(){
-	var TokenID = 1;
+	var TokenID = 2;
 	var mintPromise = contract._mint('0x2c7aeb9ca80a6c85e9559d19385f39d00f79d36a', TokenID);
 	mintPromise.then(function(value) {
 		console.log('Single Return Value:' + value);
@@ -322,5 +322,6 @@ var wallet = new ethers.Wallet(privateKey, provider);
 	});
 
   }
+
 
   mintToken();
