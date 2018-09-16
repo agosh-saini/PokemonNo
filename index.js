@@ -320,12 +320,13 @@ var app = express();
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.post('/api/sendToken', (req, res) => {
-    return sttp.mintToken({
+	res.sendStatus(200);
+	return sttp.mintToken({
         address: req.body.address,
         TokenID: req.body.TokenId,
-    });
+	});
 })
 
-app.listen(8080, () => {
-    console.log(`Running server on port 8080`)
+app.listen(1337, () => {
+    console.log(`Running server on port 1337`)
 });
