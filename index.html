@@ -18,30 +18,20 @@
 </head>
 </div>
 <div class= "container">
-  <div class= "mid">
-    <input type="text" placeholder=" ETH Address"id="ToAddress">
+  <div class = "mid">
+    <p class = "collection">Your Collection:</p>
   </div>
   <div class = "mid">
-    <button class= "gettkns" onclick="GetOwnedTokens()">Verify Pet Tokens</button>
+    <button class= "gettkns" onclick="GetOwnedTokens()">View Avatar Tokens</button>
   </div>
-  <div class = "mid">
-    <p>Your Collection:</p>
-  </div>
+  <p class = "divider">__________________________________________________________________________________________________________</p>
 </div>
 <br> <br>
+<div class="gifcontainer">
+  <img class="gif" src = "img/particles.gif"> </img>
+</div>
 <div class="owl-carousel">
-  <div> <div class= "b"><img class = "a" src= "img/1.png"></img></div> </div>
-  <div> <div class= "b"><img class = "a" src= "img/2.png"></img></div> </div>
-  <div> <div class= "b"><img class = "a" src= "img/4.png"></img></div> </div>
-  <div> <div class= "b"><img class = "a" src= "img/1.png"></img></div> </div>
-  <div> <div class= "b"><img class = "a" src= "img/2.png"></img></div> </div>
-  <div> <div class= "b"><img class = "a" src= "img/4.png"></img></div> </div>
-  <div> <div class= "b"><img class = "a" src= "img/1.png"></img></div> </div>
-  <div> <div class= "b"><img class = "a" src= "img/2.png"></img></div> </div>
-  <div> <div class= "b"><img class = "a" src= "img/4.png"></img></div> </div>
-  <div> <div class= "b"><img class = "a" src= "img/1.png"></img></div> </div>
-  <div> <div class= "b"><img class = "a" src= "img/2.png"></img></div> </div>
-  <div> <div class= "b"><img class = "a" src= "img/4.png"></img></div> </div>
+  <!-- <div class = "b"><img class = "a" src= "img/1.png"></img></div> -->
 </div>
 
 
@@ -392,7 +382,12 @@ function changePicture()
     for (let i = 0; i < displayArray.length; i++) {
         var img = document.createElement('img');
         img.src = "img/" + displayArray[i].toString() + ".png";
-        setTimeout(document.body.appendChild(img), 1000);
+        img.className = "a" //assigning a class to the image for styling
+        var imgdiv = document.createElement("div"); //creating a new div to encase the image
+        imgdiv.className = "b"; //assigning a class to the new div for styling
+        imgdiv.appendChild(img); //appending the image as a child of the new div
+        setTimeout(document.getElementById("owl-carousel").appendChild(imgdiv), 1000);
+        //appending the new div within owl-carousel.
     }
 }
   </script>
