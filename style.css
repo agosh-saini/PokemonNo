@@ -8,6 +8,10 @@
   background-image: url("img/gradbg.png");
 }
 
+body {
+  flex: 1;
+}
+
 .head{
   background: rgba(0,0,0,0.5);
   background-image: url("img/grass.png");
@@ -45,11 +49,11 @@
   align-items: center;
 }
 
-.a {
+/*.a {
   padding-left: 100px; padding-right: 100px;
   height: auto;
   width: 25px;
-}
+}*/
 
 .b{
   background-image: url("img/circle2.png");
@@ -77,4 +81,10 @@
   margin-top: 20px;
   color: rgba(0,0,0,0.4);
   text-align: center;
+}
+
+.owl-carousel .b{
+  height: 100%;
+  width: 100%;
+  flex: 1;
 }

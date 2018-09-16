@@ -22,15 +22,15 @@
     <p class = "collection">Your Collection:</p>
   </div>
   <div class = "mid">
-    <button class= "gettkns" onclick="GetOwnedTokens()">View Avatar Tokens</button>
+    <button class= "gettkns" onclick="changePicture()">View Avatar Tokens</button>
   </div>
   <p class = "divider">__________________________________________________________________________________________________________</p>
 </div>
-<br> <br>
-<div class="gifcontainer">
-  <img class="gif" src = "img/particles.gif"> </img>
+<br/>
+<div class="gifcontainer"id = "gif">
+  <img class="gif" src = "img/particles.gif"/>
 </div>
-<div class="owl-carousel">
+<div class="owl-carousel" id= "owl-carousel">
   <!-- <div class = "b"><img class = "a" src= "img/1.png"></img></div> -->
 </div>
 
@@ -380,14 +380,21 @@ function changePicture()
     var displayArray = OwnedTokens;
     console.log(displayArray);
     for (let i = 0; i < displayArray.length; i++) {
-        var img = document.createElement('img');
+        // var img = document.createElement('img');
+        // img.src = "img/" + displayArray[i].toString() + ".png";
+        // //img.className = "a" //assigning a class to the image for styling
+        // //var imgdiv = document.createElement("div"); //creating a new div to encase the image
+        // //imgdiv.className = "b"; //assigning a class to the new div for styling
+        // imgdiv.appendChild(img); //appending the image as a child of the new div
+        // //document.getElementById("owl-carousel").appendChild(imgdiv);
+		// //var gif = document.getElementById("gif");
+		// //gif.removeChild(gif.childNodes[0]);
+        // //appending the new div within owl-carousel.
+		var img = document.createElement('img');
         img.src = "img/" + displayArray[i].toString() + ".png";
-        img.className = "a" //assigning a class to the image for styling
-        var imgdiv = document.createElement("div"); //creating a new div to encase the image
-        imgdiv.className = "b"; //assigning a class to the new div for styling
-        imgdiv.appendChild(img); //appending the image as a child of the new div
-        setTimeout(document.getElementById("owl-carousel").appendChild(imgdiv), 1000);
-        //appending the new div within owl-carousel.
+		var gif = document.getElementById("gif");
+		gif.removeChild(gif.childNodes[0]);
+        setTimeout(document.body.appendChild(img), 1000);
     }
 }
   </script>
